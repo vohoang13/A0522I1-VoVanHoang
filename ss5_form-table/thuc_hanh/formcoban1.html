@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo Form cơ Bản</title>
+</head>
+<body>
+    <h1><b>Order Form</b></h1>
+    <p><b>What would you like to buy ?</b></p>
+    <style>
+        .wufoo {
+            font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+        }
+    </style>
+    <form method="Get" action="formcoban1.html" class="wufoo">
+        <select nam="dropdown">
+            <option  >A</option>
+            <option >B</option>
+            <option  >C</option>
+        </select>
+        <p><b>How many would you like to order ?</b> </p>
+        <input type="radio" name="order" ><b>1-$10</b>
+        <br/>
+        <input type="radio" name="order" ><b>2-$20</b>
+        <br/>
+        <input type="radio" name="order" ><b>3-$30</b>
+        <br/>
+        <b>Name<sup style="color: red">*</sup></b>
+        <br/><br/>
+        <input type="text" style="width: 80px" name="FirtName" value="FirtName">
+        <input type="text" style="width: 80px" name="LastName" value="Last Name">
+        <br/><br/>
+        <b>Email</b>
+        <br/><br/>
+        <input text="text" name="Email" style="width: 180px" value="vanhoang@gmail.com">
+        <br/><br/>
+        <b>Phone Number</b>
+        <br/><br/>
+        <input type="text" name="Phone" style="width: 30px" >
+        <strong>-</strong>
+        <input type="text" name="Phone" style="width: 30px" >
+        <strong>-</strong>
+        <input type="text" name="Phone" style="width: 30px" >
+        <br/><br/>
+        <input type="submit" name="submit" value="Submit" style="width: 80px">
+    </form>
+
+</body>
+</html>
