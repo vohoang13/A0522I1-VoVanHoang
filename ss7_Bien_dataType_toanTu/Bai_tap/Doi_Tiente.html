@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+    <style>
+        table, th, td {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+       <table>
+           <tr>
+               <th>Amount</th>
+               <th> </th>
+               <th>From Currency</th>
+               <th> </th>
+               <th>To Currency</th>
+               <th> </th>
+               <th> </th>
+           </tr>
+           <tr>
+               <td>
+                   <input type="number" id="money">
+               </td>
+               <td> </td>
+               <td>
+                   <select style="width: 100px">
+                       <option>Việt Nam</option>
+                   </select>
+               </td>
+               <td> </td>
+               <td>
+                   <select style="width: 100px">
+                       <option>USD</option>
+                   </select>
+               </td>
+               <td> </td>
+               <td>
+                   <input type="submit" onclick="convert()" value="Convert">
+               </td>
+           </tr>
+       </table>
+    <p>Result: <span id="result"></span></p>
+</body>
+<script>
+    function convert() {
+        let money = parseInt(document.getElementById("money").value);
+        let usd = money / 23000;
+        document.getElementById("result").innerText =usd;
+    }
+</script>
+</html>

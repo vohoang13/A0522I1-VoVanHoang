@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caluclator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <table>
+        <tr>
+            <td colspan="2"><input type="number" id="num1"></td>
+            <td colspan="2"><input type="number" id="num2"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" onclick="Cong()" value="Addition(+)"></td>
+            <td><input type="submit" onclick="Tru()" value="Addition(-)"></td>
+            <td><input type="submit" onclick="Nhan()" value="Addition(*)"></td>
+            <td><input type="submit" onclick="Chia()" value="Addition(/)"></td>
+        </tr>
+    </table>
+    <p>
+        Result Division: <span id="result"></span>
+    </p>
+</body>
+<script>
+    function Cong(){
+        let num1=parseFloat(document.getElementById("num1").value);
+        let num2=parseFloat(document.getElementById("num2").value);
+        let cong=num1+num2;
+        document.getElementById("result").innerText=cong;
+    }
+    function Tru(){
+        let num1=parseFloat(document.getElementById("num1").value);
+        let num2=parseFloat(document.getElementById("num2").value);
+        let tru=num1-num2;
+        document.getElementById("result").innerText=tru;
+    }
+    function Nhan(){
+        let num1=parseFloat(document.getElementById("num1").value);
+        let num2=parseFloat(document.getElementById("num2").value);
+        let nhan=num1*num2;
+        document.getElementById("result").innerText=nhan;
+    }
+    function Chia(){
+        let num1=parseFloat(document.getElementById("num1").value);
+        let num2=parseFloat(document.getElementById("num2").value);
+        let chia=num1/num2;
+        document.getElementById("result").innerText=chia;
+    }
+</script>
+</html>
