@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+    <script>
+        let Lai,Lai_hangThang,Tientra;
+        let soTien=parseFloat(prompt("Nhập vào số tiền vay:"));
+        let Thang=parseInt(prompt("Nhập vào thời hạn trả:"));
+        if(Thang>12){
+            Lai=12;
+            Lai_hangThang=soTien*12/12;
+            Tientra=soTien/Thang+500;
+        }else if(Thang>=7){
+            Lai=10;
+            Lai_hangThang=soTien*10/12;
+            Tientra=soTien/Thang+500;
+        }else{
+            Lai=8;
+            Lai_hangThang=soTien*8/12;
+            Tientra=soTien/Thang+500;
+        }
+        alert("Lãi suất hàng tháng: "+Lai_hangThang);
+        alert("Số tiền phải trả hàng tháng: "+Tientra);
+    </script>
+</body>
+</html>

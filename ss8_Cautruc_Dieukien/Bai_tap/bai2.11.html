@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+    <script>
+        let luong_cung=parseFloat(prompt("Nhập vào số tiền lương:"));
+        let luong_nhan,thue_suat,sothue;
+        if(luong_cung>15){
+            thue_suat=30;
+            sothue=luong_cung*30/100;
+        }else if(luong_cung>=7){
+            thue_suat=20;
+            sothue=luong_cung*20/100;
+        }else{
+            thue_suat=10;
+            sothue=luong_cung*10/100;
+        }
+        luong_nhan=luong_cung-sothue;
+        alert("thuế thu nhập là: "+sothue);
+        alert("tiền lương nhận được là: "+luong_nhan);
+    </script>
+</body>
+</html>

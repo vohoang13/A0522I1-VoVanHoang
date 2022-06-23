@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính số tiền điện</title>
+</head>
+<body>
+    <script>
+        let gia1,gia2,gia3,soTien;
+        gia1=1.6;
+        gia2=1.7;
+        gia3=1.8;
+        let soDien=parseFloat(prompt("Nhập vào số điện đã sử dụng:"));
+        if(soDien<50){
+            soTien=soDien*gia1;
+            alert("Số tiền điện cần trả: "+soTien);
+        }else if(soDien<100){
+            soTien=50*gia1+(soDien-50)*gia2;
+            alert("Số tiền điện cần trả: "+soTien);
+        }else if(soDien>100){
+            soTien=50*gia1+50*gia2+(soDien-100)*gia3;
+            alert("Số tiền điện cần trả: "+soTien);
+        } else
+            alert("Nhập lại số điện đã sử dụng");
+    </script>
+</body>
+</html>

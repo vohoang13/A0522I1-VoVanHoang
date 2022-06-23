@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp Hạng Học Lực</title>
+</head>
+<body>
+    <script>
+        let a=parseFloat(prompt("Nhập điểm kiểm tra:"));
+        let b=parseFloat(prompt("Nhập điểm giữa kì:"));
+        let c=parseFloat(prompt("Nhập điểm cuối kì:"));
+        let dtb=(a+b*2+c*3)/6;
+        if(dtb<3.5)
+            alert("học sinh yếu");
+        else if(dtb<5)
+            alert("học sinh trung bình");
+        else if(dtb<8)
+            alert("học sinh khá");
+        else
+            alert("học sinh giỏi");
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    Phí thuê bao bắt buộc là 25 nghìn.
+    <br>
+    600 đồng cho mỗi gọi của 50 phút đầu tiên.
+    <br>
+    400 đồng cho mỗi phút gọi của 150 phút tiếp theo.
+    <br>
+    200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.
+    <br>
+    <script>
+        let phi_batBuoc=25;
+        let phut=parseInt(prompt("Nhập vào số phút:"));
+        let phiGoi;
+        if(phut>200){
+            phiGoi=(phut-200)*200+150*400+50*600;
+        }else if(phut>50){
+            phiGoi=(phut-50)*400+50*600;
+        }else
+            phiGoi=50*600;
+        alert("bạn đã sử dụng "+phut+" phút");
+        alert("tổng cước phí của bạn là: " +phi_batBuoc+phiGoi);
+    </script>
+</body>
+</html>
