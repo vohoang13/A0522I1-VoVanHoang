@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<input type="button" onclick="game()" value="Chơi">
+<script>
+    let i, a;
+
+    function game() {
+        a = parseInt(prompt("Nhập vào 1 khoảng mà bạn muốn đoán từ 0 đến: "));
+        let rand = Math.floor(Math.random() * a);
+        do {
+            i = parseInt(prompt("Nhập vào 1 số trong khoảng từ 0 đến " + a));
+            if (rand == i) {
+                alert("bạn đã đoán đúng");
+            } else if (i < rand) {
+                alert("số bạn nhập nhỏ hơn số dự đoán");
+            } else if (i > rand) {
+                alert("số bạn nhập lớn hơn số dự đoán");
+            }
+        } while (i != rand);
+    }
+</script>
+</body>
+</html>

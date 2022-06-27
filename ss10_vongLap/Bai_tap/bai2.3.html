@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vẽ tam giác</title>
+</head>
+<body>
+<script>
+    //Tam giác 1:
+    let H = parseInt(prompt("Nhập vào chiều cao:"));
+    for (let i = 1; i <= H; i++) {
+        for (let j = 1; j <= i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br><br>");
+    //Tam giác 2:
+    let K = parseInt(prompt("Nhập vào chiều cao:"));
+    for (let i = 1; i <= K; i++) {
+        for (let j = K; j >= i; j--) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br><br>");
+    /*let J=parseInt(prompt("Nhập vào chiều cao:"));
+    for(let i=1;i<=J;i++){
+        for(let j=J;j>=i;j--) {
+            document.write("&nbsp&nbsp");               //đổi góc vuông tam giác sang phải
+        }
+        document.write("<br>");
+    }*/
+
+    //Tam giác 3:
+    let L = parseInt(prompt("Nhập vào chiều cao:"));
+    for (let i = 1; i <= L; i++) {
+        for (let j = L; j >= i; j--) {
+            document.write("&nbsp&nbsp");
+        }
+        for (let j = 1; j <= i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br><br>");
+
+    //Tam giác 4:
+    let G = parseInt(prompt("Nhập vào chiều cao:"));
+    for (let i = 1; i <= G; i++) {
+        for (let j = 1; j <= i; j++) {
+            document.write("&nbsp&nbsp");
+        }
+        for (let j = G; j >= i; j--) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

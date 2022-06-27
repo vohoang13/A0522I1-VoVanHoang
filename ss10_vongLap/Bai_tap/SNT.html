@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xuất số nguyên tố</title>
+</head>
+<body>
+    <script>
+        let a=parseInt(prompt("Nhập vào a:"));
+        let x,N;
+        for(x=2;x<=a;x++){
+            let dem=0;
+            for(N=1;N<=a;N++) {
+                if (x % N == 0) {
+                    dem++;
+                }
+            }
+            if(dem==2)
+                document.write(x+" ");
+        }
+    </script>
+</body>
+</html>

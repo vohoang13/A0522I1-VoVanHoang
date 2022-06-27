@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng 20 số đầu tiên</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhập vào 1 số:"));
+    let i = 0;
+    let j = 1;
+    let sum;
+    let k;
+    let s = 1;
+    for (k = 0; k < (n - 2); k++) {
+        sum = i + j;
+        i = j;
+        j = sum;
+        s = s + sum;
+    }
+    document.write(s);
+</script>
+</body>
+</html>
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In dãy fibonaci</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhập vào 1 số:"));
+    let i = 0;
+    let j = 1;
+    let sum;
+    let k;
+    for (k = 1; k <= n; k++) {
+        document.write(i + " ");
+        sum = i + j;
+        i = j;
+        j = sum;
+    }
+</script>
+</body>
+</html>
