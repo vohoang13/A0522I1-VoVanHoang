@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ Điển</title>
+</head>
+<body>
+<label>Tiếng Anh</label>
+<input type="text" id="input">
+<br><br>
+<input type="button" onclick="Search()" value="Tìm kiếm">
+<br><br>
+<p>Tiếng Việt:<p id="result"></p></p>
+</body>
+</html>
+<script>
+    function Search() {
+        let value = document.getElementById("input").value;
+        let a = ["Hello", "Goodbye", "Chicken", "Clothes"];
+        let b = ["Xin chào", "Tạm biệt", "Con gà", "Quần áo"];
+        let result;
+        console.log(a.indexOf(value));
+        if(a.indexOf(value) !== -1){
+            result = b[a.indexOf(value)];
+        }else{
+            result="khong có ket qua";
+        }
+        document.getElementById("result").innerText=result;
+    }
+</script>

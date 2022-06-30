@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=[1,2,3,10,42,100];
+    let first=0;      //Phần tử đầu tiên trong mảng
+    let last=a.length-1;      //Phần tử cuối trong mảng
+    while(first<last){
+        let b=a[first];
+        a[first]=a[last];
+        a[last]=b;
+        first++;
+        last--;
+    }
+    document.write(a);
+</script>
+</body>
+</html>

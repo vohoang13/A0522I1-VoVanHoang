@@ -6,15 +6,15 @@
 </head>
 <body>
 <script>
-    let n = parseInt(prompt("Nhập vào 1 số:"));
+
     let sum = 0;
     let i;
     let dem = 0;
-    for (i = 7; i <= n; i++) {
+    for (i = 0; i >=0; i++) {
         if (i % 7 == 0) {
             sum = sum + i;
             document.write(i + " ");
-            dem++
+            dem++;
         }
         if (dem == 30)
             break;

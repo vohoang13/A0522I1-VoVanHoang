@@ -6,17 +6,25 @@
 </head>
 <body>
     <script>
-        let a=parseInt(prompt("Nhập vào a:"));
         let x,N;
-        for(x=2;x<=a;x++){
+        let count=0;
+        for(x=2;x>0;x++){
             let dem=0;
-            for(N=1;N<=a;N++) {
+            for(N=1;N<=x;N++) {
                 if (x % N == 0) {
                     dem++;
+
                 }
+
             }
-            if(dem==2)
+            if(dem==2){
                 document.write(x+" ");
+                count ++;
+            }
+
+            if(count == 20){
+                break;
+            }
         }
     </script>
 </body>
