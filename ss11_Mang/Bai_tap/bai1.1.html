@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [1, 2, 5, 11, 9, 10, 21, 22, 45, 0];
+    let sum = 0;
+    let dem = 0;
+    for (let i = 0; i < a.length; i++) {
+        sum = sum + a[i];
+        if (a[i] >= 10) {
+            dem++;
+        }
+    }
+    document.write("tổng các phần tử trong mảng : " + sum);
+    document.write("<br>có " + dem + " số lớn hơn hoặc bằng 10");
+</script>
+</body>
+</html>
