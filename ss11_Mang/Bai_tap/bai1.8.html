@@ -6,7 +6,10 @@
 </head>
 <body>
 <script>
-    let a = [0, 2, 12, 6, 21, 10, 9, 23];
+    let a = [];
+    for(i=0;i<=5;i++){
+        a[i]=prompt();
+    }
     document.write("Mảng trước khi sắp xếp giảm: " + a);
     a.sort(function (a, b) {
         return b - a;
