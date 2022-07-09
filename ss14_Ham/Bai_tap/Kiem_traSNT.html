@@ -12,13 +12,14 @@
             if(number%i==0){
                 dem++;
             }
-            if(dem==2){
-                document.write(number + " là số nguyên tố");
-            }
         }
-        return dem;
+        if(dem==2){
+            document.write(number + " là số nguyên tố");
+        }else{
+            document.write(number+" Không phải số nguyên tố");
+        }
     }
-    isPrime(2);
+    isPrime(parseInt(prompt("Nhập vào số cần kiểm tra:")));
 </script>
 </body>
 </html>
