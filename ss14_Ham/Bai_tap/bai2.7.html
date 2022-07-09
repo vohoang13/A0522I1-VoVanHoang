@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Number(num1,num2) {
+        document.write("Giá trị của number 1 trước khi đổi: "+num1);
+        document.write("<br>Giá trị của number 2 trước khi đổi: "+num2);
+        let temp=num1;
+        num1=num2;
+        num2=temp;
+        document.write("<br>Giá trị sau khi đổi:")
+       document.write("<br>num1 :"+num1+"<br>");
+       document.write("num2: "+num2+"<br>");
+        return temp;
+    }
+    Number(parseInt(prompt("Nhập giá trị cho number 1")),parseInt(prompt("Nhập giá trị cho number 2")));
+</script>
+</body>
+</html>

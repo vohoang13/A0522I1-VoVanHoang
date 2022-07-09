@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Array() {
+        let Do_dai=parseInt(prompt("Nhập vào độ dài mảng"));
+        let arr=[];
+        for(let i=0;i<Do_dai;i++){
+            arr[i]=prompt("Nhập các phần tử cho mảng:");
+        }
+        let str=prompt("Nhập phần tử muốn tìm:");
+        let dem=0;
+        for(let j=0;j<arr.length;j++) {
+            if (arr[j]==str) {
+                dem++;
+            }
+        }
+        if(dem>0){
+            return dem;
+        }else {
+            return -1;
+        }
+    }
+    alert(Array());
+</script>
+</body>
+</html>

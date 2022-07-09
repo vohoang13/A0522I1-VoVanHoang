@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="num">
+<input type="button" onclick="alert(Number(document.getElementById('num').value))" value="Click">
+</body>
+</html>
+<script>
+    function Number(num) {
+        num = parseInt(num);
+        num++;
+        return num;
+    }
+</script>

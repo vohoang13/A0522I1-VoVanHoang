@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="Star">
+<input type="button" onclick="alert(star())" value="Click">
+</body>
+</html>
+<script>
+    let Star1=["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let Star2=["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function star() {
+        let Star3=document.getElementById('Star').value;
+        let result;
+        for(i=0;i<Star1.length;i++){
+            if(Star1.indexOf(Star3)!=-1){
+                result=Star2[Star1.indexOf(Star3)];
+            }
+        }
+        return result;
+    }
+</script>

@@ -6,17 +6,17 @@
 </head>
 <body>
 <script>
-    let a=" Một Hai Bốn 6";
-    let b=" Một Hai Bốn 6";
-    let dem=true;
+    let a=prompt();
+    let b=prompt();
+    let count=true;
     for(i=0;i<a.length;i++){
-        if(a[i]==b[i]&&a[i+1]==b[i+1]){
-            dem;
+        if(a[i]==b[i]){
+            count;
         }else{
-            dem=false;
+            count=false;
         }
     }
-   if(dem){
+   if(count){
        document.write("chuỗi a giống b");
    }else {
        document.write("chuỗi a khác b");
