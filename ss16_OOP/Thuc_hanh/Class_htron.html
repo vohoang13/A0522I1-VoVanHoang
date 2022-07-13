@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Circle(radius) {
+        this.radius=radius;
+        this.Area=function () {
+            return Math.PI*radius*radius;
+        }
+    }
+    let Area=new Circle(2);
+    alert(Area.Area());
+</script>
+</body>
+</html>

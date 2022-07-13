@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Temperature(temperature) {
+        this.temperature=temperature;
+        this.Fahrenheit=function () {
+            return (9/5)*this.temperature+32;
+        }
+        this.Kenvin=function () {
+            return this.temperature+273.15;
+        }
+    }
+    let Chuyen_doi=new Temperature(+prompt("Nhập vào độ C >= -273 độ: "));
+    alert("nhiệt độ F: "+ Chuyen_doi.Fahrenheit());
+    alert("nhiệt độ K: "+ Chuyen_doi.Kenvin());
+</script>
+</body>
+</html>

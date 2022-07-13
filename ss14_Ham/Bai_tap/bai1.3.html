@@ -9,13 +9,13 @@
     function Number(num1,num2) {
         let tong;
         if(num1>num2){
-            alert(num1+" lớn hơn "+num2);
+            return num1 + " lớn hơn " + num2;
         }else{
-            tong = num1+num2;
-            alert(tong);
+            tong=num1+num2;
+            return tong;
         }
     }
-    Number(1,2);
+    alert(Number(+prompt(),+prompt()));
 </script>
 </body>
 </html>
