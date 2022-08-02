@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let DoDai = +prompt("Nhập độ dài không quá 50 :");
+    let Mang = [];
+    let Dem = 0;
+    for (let i = 0; i < DoDai; i++) {
+        Mang[i] = prompt("Nhập giá trị cho phần tử mảng:");
+    }
+    document.write("Mảng vừa nhập :" + Mang);
+    for (let j = 0; j < Mang.length; j++) {
+        if ((Mang[j] < Mang[j + 1] && Mang[j] < Mang[j - 1]) || (Mang[j] > Mang[j + 1] && Mang[j] > Mang[j - 1])) {
+            Dem++;
+        }
+    }
+    if (Dem == Mang.length - 2) {
+        document.write("<br>true");
+    } else {
+        document.write("<br>false");
+    }
+
+</script>
+</body>
+</html>

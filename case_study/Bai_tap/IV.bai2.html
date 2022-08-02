@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("nhap chuoi");
+    let regex = new RegExp();
+    let dem=0;
+    while(str.length > 0 ){
+        regex = new RegExp(str[0],"g");
+        str = str.replace(regex, '');
+        dem ++;
+    }
+    console.log(dem);
+</script>
+</body>
+</html>

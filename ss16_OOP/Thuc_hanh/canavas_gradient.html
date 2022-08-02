@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+
+</canvas>
+<script>
+
+        var c = document.getElementById("myCanvas");
+
+        var ctx = c.getContext("2d");
+
+// Tạo gradient
+
+        var grd = ctx.createLinearGradient(0, 0, 200, 0);
+
+        grd.addColorStop(0, "red");
+
+        grd.addColorStop(1, "white");
+
+// Vẽ hình
+
+        ctx.fillStyle = grd;
+
+        ctx.fillRect(25, 13, 100, 50);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Mang = new Array(+prompt("Nhập vào độ dài mảng: "));
+    for (let i = 0; i < Mang.length; i++) {
+        Mang[i] = +prompt("Nhập phần tử cho Mảng");
+    }
+    let So = +prompt("Nhập vào 1 số nguyên bất kì");
+
+    function Mang1(Mang, So) {
+        document.write("Mảng trước khi thay đổi:" + Mang);
+        for (let j = 0; j < Mang.length; j++) {
+            if (So % 2 == 0) {
+                if (Mang[j] % 2 != 0) {
+                    Mang[j]++;
+                }
+            } else {
+                if (Mang[j] % 2 == 0) {
+                    Mang[j]++;
+                }
+            }
+            if (Mang[j] == So) {
+                Mang[j] = -1;
+            }
+        }
+        document.write("<br>Mảng sau khi thay đổi:" + Mang);
+    }
+
+    Mang1(Mang, So);
+</script>
+</body>
+</html>

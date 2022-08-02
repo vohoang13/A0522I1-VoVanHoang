@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhập vào 1 số:"));
+    let i = 0;
+    let j = 1;
+    let sum;
+    let k;
+    for (k = 1; k <= n; k++) {
+        //document.write(i + " ");
+        sum = i + j;
+        i = j;
+        j = sum;
+        let DemSnt=0;
+        for(let h=1;h<i;h++){
+            if(i%h==0){
+                DemSnt++;
+            }
+        }
+        if(DemSnt==2){
+            document.write(i+" ")
+        }
+    }
+</script>
+</body>
+</html>

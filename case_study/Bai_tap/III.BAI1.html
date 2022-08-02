@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let length=+prompt("Nhập độ dài cho mảng: ");
+    let a=[];
+    for(let j=0;j<length;j++){
+        a[j]=+prompt("Nhập phần tử cho mảng a:");
+    }
+    let b=[];
+    b[0]=a[0];
+    for(let i=1;i<a.length;i++) {
+        b[i]=b[i-1]+a[i];   //b[2]=(b[1]=b[0]+a[1])+a[2]
+                            //b[3]=(b[2]=b[1]+a[2])+a[3]
+    }
+    alert(b);
+</script>
+</body>
+</html>

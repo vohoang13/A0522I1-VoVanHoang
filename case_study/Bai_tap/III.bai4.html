@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="input">
+<button type="button" onclick="print()" >In</button>
+<br>
+result:
+<p id="result"></p>
+</body>
+<script>
+    function print(){
+        let input = new String(document.getElementById("input").value);
+        let result =""
+        if(isNaN(parseInt(input))){
+            alert("vui long nhap so")
+        }else{
+            for(let i=0; i<input.length; i++){
+                switch(input[i]){
+                    case "1":
+                        result = result +" Mot";
+                        break;
+                    case "2":
+                        result = result +" Hai";
+                        break;
+                    case "3":
+                        result = result +" Ba";
+                        break;
+                    case "4":
+                        result = result +" Bon";
+                        break;
+                    case "5":
+                        result = result +" Nam";
+                        break;
+                    case "6":
+                        result = result +" Sau";
+                        break;
+                    case "7":
+                        result = result +" Bay";
+                        break;
+                    case "8":
+                        result = result +" Tam";
+                        break;
+                    case "9":
+                        result = result +" Chin";
+                        break;
+                }
+            }
+        }
+        document.getElementById("result").innerText = result;
+    }
+</script>
+</html>

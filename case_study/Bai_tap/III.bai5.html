@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1>MENU</h1>
+<p>1. Cafe</p>
+<p>2. Cam vắt</p>
+<p>3. Nước ép cà rốt</p>
+<p>4. Nước ép cà chua</p>
+<p>5. Nước lọc</p>
+<p>6. Nước dừa</p>
+<p>Tổng tiền: <span id="Money"></span></p>
+</body>
+<script>
+    // let a = new String("abc");
+    // console.log(a)
+    let Order;
+    let amount;
+    let Drink;
+    let result=0;
+    while (Order!=7) {
+        Order=+prompt(
+            "1. Cafe \n"+
+            "2. Cam vắt\n"+
+            "3. Nước ép cà rốt\n"+
+            "4. Nước ép cà chua\n"+
+            "5. Nước lọc\n"+
+            "6. Nước dừa\n"+
+            "Nhập vào số thứ tự và nhập 7 để kết thúc:");
+        if (Order === 1) {
+            Drink = 10000;
+            alert("Số tiền của Cafe: " + Drink);
+            amount = +prompt("Nhập vào số lượng món: ");
+            result= result+ (Drink*amount);
+        } else if (Order === 2) {
+            Drink = 12000;
+            alert("Số tiền của Cam vắt: " + Drink);
+            amount = +prompt("Nhập vào số lượng món: ");
+            result= result+ (Drink*amount);
+        }else if (Order === 3) {
+            Drink = 15000;
+            alert("Số tiền của Nước ép cà rốt: " + Drink);
+            amount = +prompt("Nhập vào số lượng món: ");
+            result= result+ (Drink*amount);
+        }else if (Order === 4) {
+            Drink = 12000;
+            alert("Số tiền của cà chua: " + Drink);
+            amount = +prompt("Nhập vào số lượng món: ");
+            result= result+ (Drink*amount);
+        }else if (Order === 5) {
+            Drink = 5000;
+            alert("Số tiền của Nước suối: " + Drink);
+            amount = +prompt("Nhập vào số lượng món: ");
+            result= result+ (Drink*amount);
+        }else if (Order === 6) {
+            Drink = 20000;
+            alert("Số tiền của Nước dừa: " + Drink);
+            amount = +prompt("Nhập vào số lượng món: ");
+            result= result+ (Drink*amount);
+        }
+    }
+    document.getElementById("Money").innerHTML=result;
+</script>
+</html>

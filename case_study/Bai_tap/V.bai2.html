@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [
+        [1, 2, 4, 6],
+        [2, 3, 1, 10],
+        [5, 15, 2, 3]
+    ];
+   let dem=0;
+   function KiemtraSNT(value) {
+        for(let i=2;i<value;i++){
+            if(value%i==0){
+                return false;
+            }
+        }
+        return true;
+   }
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < a[i].length; j++) {
+            if (KiemtraSNT(a[i][j])) {
+               dem++;
+               document.write(a[i][j]+" ");
+            }
+        }
+    }
+    alert(dem);
+</script>
+</body>
+</html>

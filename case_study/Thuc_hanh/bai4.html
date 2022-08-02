@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Mang=new Array(+prompt("Nhập vào độ dài mảng:"));
+    let sum=0;
+    let dem=0;
+    for(let i=0;i<Mang.length;i++){
+        Mang[i]=+prompt("Nhập giá trị cho phần tử mảng:");
+    }
+    document.write("Mảng vừa nhập :"+ Mang);
+    for(let j=0;j<Mang.length;j++){
+        if(Mang.indexOf(Mang[j])%2==1&&Mang[j]%2==0){
+            sum=sum+Mang[j];
+            dem++;
+        }
+    }
+    document.write("<br>Trung bình cộng:"+ sum/dem);
+</script>
+</body>
+</html>

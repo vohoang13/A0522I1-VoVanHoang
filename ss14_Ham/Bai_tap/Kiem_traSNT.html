@@ -6,20 +6,25 @@
 </head>
 <body>
 <script>
-    function isPrime(number) {
-        let dem=0;
-        for(i=1;i<=number;i++){
-            if(number%i==0){
-                dem++;
-            }
-        }
-        if(dem==2){
-            document.write(number + " là số nguyên tố");
-        }else{
-            document.write(number+" Không phải số nguyên tố");
+    // function isPrime(number) {
+    //     for(let i=2;i<number;i++){
+    //         if(number%i==0){
+    //             return false;
+    //         }
+    //     }
+    //     alert(number+" là số nguyên tố");
+    // }
+    // isPrime(parseInt(prompt("Nhập vào số cần kiểm tra:")));0
+    let snt = +prompt("Nhap so nguyen to: ");
+    let dem=0;
+    for(let x=1;x<=snt;x++){
+        if(snt%x==0){
+            dem++
         }
     }
-    isPrime(parseInt(prompt("Nhập vào số cần kiểm tra:")));
+    if(dem==2){
+        alert(snt + " la so nguyen to")
+    }
 </script>
 </body>
 </html>

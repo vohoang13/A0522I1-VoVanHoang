@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="TaoMoi()">Thêm xe mới</button>
+<p id="Bang1"></p>
+<script>
+    class Xe {
+        constructor(BienSo, HoTenSv, CMND, Phi) {
+            this.BienSo = BienSo;
+            this.HoTenSv = HoTenSv;
+            this.CMND = CMND;
+            this.Phi = Phi;
+        }
+
+        setBienSo(BienSo) {
+            this.BienSo = BienSo;
+        }
+
+        setHoTenSv(HoTenSv) {
+            this.HoTenSv = HoTenSv;
+        }
+
+        setCMND(CMND) {
+            this.CMND = CMND;
+        }
+
+        setPhi(Phi) {
+            this.Phi = Phi;
+        }
+
+        getBienSo() {
+            return this.BienSo;
+        }
+
+        getHoTenSv() {
+            return this.HoTenSv;
+        }
+
+        getCMND() {
+            return this.CMND;
+        }
+
+        getPhi() {
+            return this.Phi;
+        }
+    }
+
+    let Xe1 = new Xe("43D1222", "Ngo Thi Nham", 2021546232, 5000);
+    let Xe2 = new Xe("43H1223", "Nguyen Văn A", 2021546532, 5000);
+    let Mang = [Xe1, Xe2];
+
+    function Bang2(Mang) {
+        let str = "<table border='1' >" +
+            "<tr>" +
+            "<th>Biển số</th>" +
+            "<th>Họ và tên sinh viên</th>" +
+            "<th>CMND</th>" +
+            "<th>Phí</th>" +
+            "<th>Công dụng</th>" +
+            "</tr>";
+        for (let i = 0; i < Mang.length; i++) {
+            str += "<tr>" +
+                "<td>" + Mang[i].getBienSo() + "</td>" +
+                "<td>" + Mang[i].getHoTenSv() + "</td>" +
+                "<td>" + Mang[i].getCMND() + "</td>" +
+                "<td>" + Mang[i].getPhi() + "</td>" +
+                "<td>" +
+                "<button onclick='Xoa(" + i + ")'>Xóa</button>" +
+                "</td>" +
+                "</tr>";
+        }
+        str += "</table>";
+        document.getElementById("Bang1").innerHTML = str;
+    }
+
+    Bang2(Mang);
+
+    function TaoMoi() {
+        let BienSoMoi = prompt("Nhập biển số mới:");
+        let HoTenSVMoi = +prompt("Nhập họ tên mới :");
+        let CMNDMoi = prompt("Nhập CMND mới :");
+        let PhiMoi = prompt("Nhập giá mới")
+        let XeMoi = new Xe(BienSoMoi, HoTenSVMoi, CMNDMoi, PhiMoi);
+        Mang.push(XeMoi);
+        Bang2(Mang);
+    }
+
+    function Xoa(value) {
+        let CauHoi = confirm("Bạn có chắc muốn xóa ?");
+        if (CauHoi) {
+            Mang.splice(value, 1);
+            alert("Xóa thành công");
+        }
+        Bang2(Mang);
+    }
+</script>
+</body>
+</html>

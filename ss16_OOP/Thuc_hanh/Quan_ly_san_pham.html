@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="TạoMoi()">Thêm sản phẩm mới</button>
+<p id="Bang"></p>
+</body>
+<script>
+    class DienThoai {
+        constructor(ten, gia, mau) {
+            this.ten = ten;
+            this.gia = gia;
+            this.mau = mau;
+        }
+
+        setTen(TenMoi) {
+            this.ten = TenMoi;
+        }
+
+        setGia(GiaMoi) {
+            this.gia = GiaMoi;
+        }
+
+        setMau(MauMoi) {
+            this.mau = MauMoi;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        getGia() {
+            return this.gia;
+        }
+
+        getMau() {
+            return this.mau;
+        }
+    }
+
+    let Nokia = new DienThoai("Nokia", 5000000, "Đen");
+    let Iphone = new DienThoai("Iphone", 600000, "Trắng");
+    let arr = [Nokia, Iphone];
+
+    function dislay(arr) {
+        let str = "<table border='1' >" +
+            "<tr>" +
+            "<th>Tên</th>" +
+            "<th>Giá</th>" +
+            "<th>Giá</th>" +
+            "<th>Công dụng</th>" +
+            "</tr>";
+        for (let i = 0; i < arr.length; i++) {
+            str += "<tr>" +
+                "<td>" + arr[i].getTen() + "</td>" +
+                "<td>" + arr[i].getGia() + "</td>" +
+                "<td>" + arr[i].getMau() + "</td>" +
+                "<td>" +
+                "<button onclick='edit(" + i + ")'>Sửa</button>" +
+                "<button onclick='remove(" + i + ")'>Xóa</button>" +
+                "</td>" +
+                "</tr>";
+        }
+        str += "</table>";
+        document.getElementById("Bang").innerHTML = str;
+    }
+
+    dislay(arr);
+
+    function TạoMoi() {
+        let tenMoi = prompt("Nhập tên mới :");
+        let giaMoi = +prompt("Nhập giá mới :");
+        let mauMoi = prompt("Nhập màu :");
+        let DienThoaiMoi = new DienThoai(tenMoi, giaMoi, mauMoi);
+        arr.push(DienThoaiMoi);
+        dislay(arr);
+    }
+
+    function edit(value) {
+        let tenMoi = prompt("Nhập tên mới :");
+        let giaMoi = +prompt("Nhập giá mới :");
+        let mauMoi = prompt("Nhập màu :");
+        let DienThoaiMoi = new DienThoai(tenMoi, giaMoi, mauMoi);
+        arr[value] = DienThoaiMoi;
+        dislay(arr);
+    }
+
+    function remove(value) {
+        let question = confirm("Bạn có chắc muốn xóa ?");
+        if (question) {
+            arr.splice(value, 1);
+            alert("Xóa thành công");
+        }
+        dislay(arr);
+    }
+</script>
+</html>
